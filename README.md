@@ -45,9 +45,11 @@ application container image, and copy the necessary VSCode pieces into place wit
 It will also install Rails if you've not copied this repo into your existing Rails install, start up the
 application stack (app container and MySQL container). Note that you should make the following manual changes:
 
+Do the following steps (1-3) BEFORE you attempt to browse to localhost:3000 for the first time :
+
 1. Edit `config/database.yml` and change the database hostname to `database`.
 
-1. Edit `Procfile.dev` (we're assuming Rails 7 here) to add `-b 0.0.0.0` to the `rails server` line. Otherwise Puma
+2. Edit `Procfile.dev` (we're assuming Rails 7 here) to add `-b 0.0.0.0` to the `rails server` line. Otherwise Puma
    won't listen on the necessary network interface for your browser to access it.
 
 Once all of that is done, the developer will be left with a VSCode window in which to develop, and the VSCode Terminal
@@ -55,7 +57,10 @@ will be running within the application container. From there, a developer should
 including bundling new gems, running migrations and rake tasks, etc. without having to worry about interacting directly
 with Docker.
 
-Once work is done, shutting down the stack is as simple as closing the folder window in VSCode.
+3.  In the VS code terminal, execute : 
+  # rails db:create
+
+Once work is done, shutting down the stack is as simple as closing VSCode.
 
 ## Using Debugging
 
