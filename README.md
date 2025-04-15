@@ -1,3 +1,11 @@
+Following this tutorial : https://medium.com/jungletronics/from-zero-to-hotwire-rails-8-e6cd16216165
+but using a docker container instead of running on bare metal
+
+- make sure MySQL is not running locally
+- make sure Docker desktop is running
+- open vs code
+- click the "reopen in container" button
+- wait a bit (on first run at least), while it installs rails and runs bundle
 # README
 
 Using Visual Studio Code's [Remote Containers](https://code.visualstudio.com/docs/remote/remote-overview) features, this
